@@ -1,0 +1,48 @@
+
+// Usage of tables (linear and multi-dimensional)
+function setZero(ref int[][] tab) void in 
+    int x = 0;
+    while (x < tab.len(0))
+        int y = 0;
+        while (y < tab.len(1))
+            tab[x][y] = 0;
+
+            y = y + 1;
+        endwhile
+
+        x = x + 1;
+    endwhile
+endfunction
+
+main
+    bool[] oddity = [true, false, true];
+    print(oddity.len); // Number of dimensions -> 1
+    print(oddity.len(0));  // Length of 0-th dimension -> 3
+
+    int n = 1;
+    while (n < 5) // Tables can be dynamically enlarged.
+        n = n + 1;
+        int temp = n / 2;
+        oddity[n] = n == temp * 2;
+    endwhile
+
+    put("New size: ");
+    print(oddity.len(0));
+
+    n = 0;
+    // Tables exercise the default value feature.
+    while (n < 10)
+        print(oddity[n]); 
+        n = n + 1;
+    endwhile
+
+    // Multidimensional 
+    int[][] board = [[1,2,3], [4,5,6], [7,8,9]];
+    board[1][2] = 200;
+    print(board[0][0]); // -> 1
+    print(board[1][2]); // -> 200
+
+    setZero(board);
+    print(board[0][0]); // -> 0
+
+endmain

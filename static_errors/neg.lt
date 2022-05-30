@@ -1,0 +1,6 @@
+
+main
+    string s = "t";
+    s = -s;
+endmain
+

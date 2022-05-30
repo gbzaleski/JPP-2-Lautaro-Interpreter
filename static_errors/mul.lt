@@ -1,0 +1,8 @@
+
+main
+    bool b = true;
+    int s = 5;
+
+    int k = s * b;
+endmain
+

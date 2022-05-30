@@ -1,0 +1,8 @@
+
+main
+    string s = "t";
+    int p = 5;
+
+    s + p;
+endmain
+

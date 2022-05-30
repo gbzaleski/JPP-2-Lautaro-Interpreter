@@ -1,0 +1,6 @@
+
+
+main 
+   string w = "STRING";
+   w.append(10);
+endmain

@@ -1,0 +1,7 @@
+function fiver(int b) int in 
+    return 5;
+endfunction
+
+main 
+    fiver(5, 8);
+endmain

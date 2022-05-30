@@ -1,0 +1,6 @@
+
+
+main 
+   string w = "STRING";
+   w.replicate("A");
+endmain

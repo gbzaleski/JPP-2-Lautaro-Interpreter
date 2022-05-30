@@ -1,0 +1,33 @@
+ 
+function isPrime(int n) bool in
+    int i = 2;
+    while (i * i <= n)
+        const int rem = n / i;
+        if (rem * i == n) then
+            return false;
+        endif
+        i = i + 1;
+    endwhile
+    return true;
+endfunction
+
+function era(int era, ref int counter) void in
+    int i = 2;
+    while (i <= era)
+        if (isPrime(i)) then
+            print(i);
+            counter = counter + 1;
+        endif
+        i = i + 1;
+    endwhile
+endfunction
+
+// Algorithm for prime numbers lookup in given range.
+main
+    int counter = 0;
+    const int range = 50;
+    era(range, counter);
+    put("\nCounter of results: ");
+    print(counter);
+endmain
+

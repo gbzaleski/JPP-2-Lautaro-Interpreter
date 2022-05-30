@@ -1,0 +1,7 @@
+function fiver(int b, string tst, string b) bool in 
+    return true;
+endfunction
+
+main 
+    fiver(5, "5", "5");
+endmain

@@ -1,0 +1,7 @@
+function fiver(int b) int in 
+    return 5;
+endfunction
+
+main 
+    notFiver(5);
+endmain

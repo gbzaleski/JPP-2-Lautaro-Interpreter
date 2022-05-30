@@ -1,0 +1,15 @@
+
+main 
+
+    int a = 10;
+    if (true) then
+        int b;
+        print(a);
+
+        int a = 20;
+        print(a);
+    endif
+
+    int b;
+    print(a);
+endmain 

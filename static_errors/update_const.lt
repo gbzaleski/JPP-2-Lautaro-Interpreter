@@ -1,0 +1,6 @@
+
+
+main 
+    const int w = 5;
+    w = 20;
+endmain

@@ -1,0 +1,47 @@
+
+// All features from the 15pts part.
+function checker(int a, ref int b) void in
+    b = a;
+    print(a + b);
+endfunction
+
+main
+    skip;
+    bool t = true;
+    int x = 5;
+    string test = "TEST";
+    skip;
+
+    int w = x + 5;
+    int a = 20 - w;
+    int b = a * w + 1;
+    int c = w / x;
+
+    bool k1 = a <> b;
+    bool k2 = b < c;
+    bool k3 = x <= 5;
+    bool k4 = w == 200;
+    bool kb = t == true;
+
+    if (x < w) then
+        print("MNIEJSZY");
+    else
+        print("WIEKSZY");
+    endif
+
+    int i = 0;
+    while (i <= 10)
+        print(i);
+        i = i + 1;
+    endwhile
+
+    print(x);
+    print(w);
+    checker(x, w);
+
+    if (x == w) then
+        print("DONE");
+    endif
+
+endmain
+

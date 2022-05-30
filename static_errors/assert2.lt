@@ -1,0 +1,8 @@
+
+function f() bool in
+    return true;
+endfunction
+
+main 
+    assert(f, "Function!");
+endmain

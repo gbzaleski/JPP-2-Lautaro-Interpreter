@@ -1,0 +1,9 @@
+
+
+main 
+  
+   string str = "STRING";
+
+   print(str.cut(3,2));
+
+endmain

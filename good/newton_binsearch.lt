@@ -1,0 +1,47 @@
+
+// Ciągla funkcja do analizy.
+function f(int x) int in 
+    return -4312 + 308*x - 1400*x*x + 100*x*x*x - 112*x*x*x*x + 8*x*x*x*x*x;
+endfunction
+
+function newton(int a, int b) int in
+    int mid = (a + b) / 2;
+
+    if (f(mid) > 0) then 
+        b = mid;
+    else 
+        a = mid;
+    endif
+
+    if (b - a > 1) then
+        return newton(a, b);
+    else
+        if (f(b) == 0) then 
+            return b;
+        else 
+            if (f(a) == 0) then
+                return a;
+            else 
+                print("Brak rozwiazania");
+            endif
+        endif
+    endif
+
+endfunction
+
+main
+    // Musi zachodzic f(a) < 0 < f(b)
+    int a = -21;
+    int b = 37;
+
+    if (f(a) > 0) then 
+        print("Zly poczatek przedzialu");
+    else
+        if (f(b) < 0) then 
+            print("Zly koniec przedzialu");
+        else 
+            print("Miejsce zerowe: ");
+            print(newton(a, b));
+        endif
+    endif
+endmain

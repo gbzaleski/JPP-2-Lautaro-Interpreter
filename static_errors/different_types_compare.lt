@@ -1,0 +1,4 @@
+
+main 
+    bool c = 2 < "str";
+endmain

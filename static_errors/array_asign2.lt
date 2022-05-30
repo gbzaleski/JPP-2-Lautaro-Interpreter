@@ -1,0 +1,6 @@
+
+main 
+    int[] tab = [1,2,3];
+    tab = [true, true, false];
+endmain
+

@@ -1,0 +1,19 @@
+
+// All features from the 20pts part.
+function sqool(int x) int in
+    return x * x;
+endfunction
+
+main 
+    int a = 5;
+
+    if (true) then
+        print(a); // -> 5
+        a = 4;
+        int a = 10; 
+        print(a); // -> 10
+    endif
+    
+    print(a); // -> 4
+    print(sqool(a)); // -> 16 
+endmain 

@@ -1,0 +1,17 @@
+
+
+main 
+
+   string w = "ABCDEFG";
+
+   print(w.length);
+
+   print(w.replicate(3));
+
+   print(w.reverse);
+
+   print(w.append("_APPEND"));
+
+   print(w.cut(2, 4));
+
+endmain

@@ -1,0 +1,14 @@
+
+
+main 
+    int[][] tab = [[1,2,3],[4,5,6,7,8]];
+    
+    if (tab[1][1]) then
+        print("This is fine!");
+    endif
+
+    if (tab) then
+        print("This is not!");
+    endif
+
+endmain

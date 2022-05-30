@@ -1,0 +1,14 @@
+
+// No output in this programme.
+main 
+   assert(10 > 5, "This works");
+
+   int n = 2 * 10;
+
+   assert(n, "n is not positive");
+
+   string w = "ABC";
+
+   assert(w, "w is empty");
+   
+endmain

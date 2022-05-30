@@ -1,0 +1,9 @@
+
+
+main 
+  
+   string str = "STRING";
+
+   print(str.cut(2, 50));
+
+endmain

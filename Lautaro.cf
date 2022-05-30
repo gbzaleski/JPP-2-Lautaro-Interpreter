@@ -1,0 +1,146 @@
+-- Programmes ------------------------------------------------
+
+entrypoints Programme ;
+
+Main.      Programme ::= [TopDef] "main" [Stmt] "endmain" ;
+
+FnDef.	   TopDef ::= "function" Ident "(" [Arg] ")" Type "in" [Stmt] "endfunction" ;
+
+FnDefVoid. TopDef ::= "function" Ident "(" [Arg] ")" "void" "in" [Stmt] "endfunction" ;
+
+separator  TopDef "" ;
+
+ArgVal.    Arg ::= Type Ident ;
+
+ArgRef.    Arg ::= "ref" Type Ident ;
+
+separator  Arg "," ;
+
+-- Statements ----------------------------------------------
+
+separator   Stmt "" ;
+
+Empty.      Stmt ::= ";" ;
+
+Skip.       Stmt ::= "skip" ";";
+
+Decl.       Stmt ::= Type Item ";" ;
+
+DeclConst.  Stmt ::= "const" Type Item ";" ;
+
+NoInit.     Item ::= Ident ; 
+
+Init.       Item ::= Ident "=" Expr ;
+
+VarSet.     Stmt ::= Ident "=" Expr ";" ;
+
+ArrSet.     Stmt ::= Ident [ArrPos] "=" Expr ";" ;
+
+ArrArg.     ArrPos ::= "[" Expr "]" ; 
+
+separator nonempty ArrPos "" ;
+
+SReturn.    Stmt ::= "return" Expr ";" ;
+
+SVoidReturn. Stmt ::= "return" ";" ;
+
+SIf.        Stmt ::= "if" "(" Expr ")" "then" [Stmt] "endif" ;
+
+SIfElse.    Stmt ::= "if" "(" Expr ")" "then" [Stmt] "else" [Stmt] "endif" ;
+
+SWhile.     Stmt ::= "while" "(" Expr ")" [Stmt] "endwhile" ;
+
+Brk.        Stmt ::= "break" ";" ;
+ 
+Cnt.        Stmt ::= "continue" ";" ;
+
+SPrint.     Stmt ::= "print" "(" Expr ")" ";" ;
+
+SPut.       Stmt ::= "put" "(" Expr ")" ";" ;
+
+SAssert.    Stmt ::= "assert" "(" Expr "," Expr ")" ";" ;
+
+SExp.       Stmt ::= Expr ";" ;
+
+-- Types ---------------------------------------------------
+
+Int.       Type ::= "int" ;
+
+Str.       Type ::= "string" ;
+
+Bool.      Type ::= "bool" ;
+
+TArr.      Type ::= Type "[]";
+
+-- Expressions ---------------------------------------------
+
+EVar.      Expr6 ::= Ident ;
+
+ELitInt.   Expr6 ::= Integer ;
+
+ELitTrue.  Expr6 ::= "true" ;
+
+ELitFalse. Expr6 ::= "false" ;
+
+EString.   Expr6 ::= String ;
+
+EApp.      Expr6 ::= Ident "(" [Expr] ")" ;
+
+EArr.      Expr6 ::= "[" [Expr] "]" ; 
+
+ArrLen.    Expr6 ::= Ident "." "len" "(" Expr ")" ; 
+
+ArrDim.    Expr6 ::= Ident "." "len" ;
+
+ArrApp.    Expr6 ::= Ident [ArrPos] ;
+
+StrLength. Expr6 ::= Ident "." "length" ;
+
+StrReverse. Expr6 ::= Ident "." "reverse" ;
+
+StrAppend. Expr6 ::= Ident "." "append" "(" Expr ")" ;
+
+StrCut.    Expr6 ::= Ident "." "cut" "(" Expr "," Expr ")" ;
+
+StrReplicate. Expr6 ::= Ident "." "replicate" "(" Expr ")" ;
+
+Neg.       Expr5 ::= "-" Expr6 ;
+
+EMul.      Expr4 ::= Expr4 MulOp Expr5 ;
+
+EAdd.      Expr3 ::= Expr3 AddOp Expr4 ;
+
+ERel.      Expr2 ::= Expr2 RelOp Expr3 ;
+
+coercions  Expr 6 ;
+
+separator  Expr "," ;
+
+-- Operators -----------------------------------------------
+
+Plus.      AddOp ::= "+" ;
+
+Minus.     AddOp ::= "-" ;
+
+Times.     MulOp ::= "*" ;
+
+Div.       MulOp ::= "/" ;
+
+LTH.       RelOp ::= "<" ;
+
+GTH.       RelOp ::= ">" ;
+
+LE.        RelOp ::= "<=" ;
+
+GE.        RelOp ::= ">=" ;
+
+EQU.       RelOp ::= "==" ;
+
+NE.        RelOp ::= "<>" ;
+
+-- Comments ------------------------------------------------
+
+comment    "//" ;
+
+comment    "/*" "*/" ;
+

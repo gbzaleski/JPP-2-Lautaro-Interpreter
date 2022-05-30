@@ -1,0 +1,19 @@
+// Using continue and break
+main 
+    int n = 0;
+    while (true)
+        n = n + 1;
+        print(n);
+
+        if (n < 5) then 
+            continue;
+        endif
+
+        if (n > 10) then
+            break;
+        endif 
+
+        print(n);
+
+    endwhile
+endmain

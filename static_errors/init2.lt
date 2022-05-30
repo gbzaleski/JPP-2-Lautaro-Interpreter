@@ -1,0 +1,5 @@
+
+
+main 
+    bool b = 2 + 2;
+endmain

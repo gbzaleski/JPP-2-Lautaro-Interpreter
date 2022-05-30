@@ -1,0 +1,21 @@
+main
+    bool t = true;
+    int x = 5;
+    string test = "TEST";
+
+    int w = x + 5;
+
+    if (x < w) then
+        print("MNIEJSZY");
+    else
+        print("WIEKSZY");
+    endif
+
+    int i = 0;
+    while (i <= 10)
+        print(i);
+        i = i + 1;
+    endwhile
+
+endmain
+

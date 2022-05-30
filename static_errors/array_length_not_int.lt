@@ -1,0 +1,6 @@
+
+
+main
+    bool[] odd = [true, false];
+    int l = odd.len("wrong-arg");
+endmain 

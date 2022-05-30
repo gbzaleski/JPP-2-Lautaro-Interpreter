@@ -1,0 +1,7 @@
+function fiver(int b) void in
+    print(5 * b);
+endfunction
+
+main 
+    print(fiver);
+endmain

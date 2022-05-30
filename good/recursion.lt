@@ -1,0 +1,15 @@
+
+// Function with recursion
+function factorial(int n) int in
+  if (n < 2) then 
+    return 1;
+  else
+    return n * factorial(n - 1);
+  endif
+endfunction
+
+main
+  print(factorial(5));
+  print(factorial(10));
+endmain
+

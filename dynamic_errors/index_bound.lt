@@ -1,0 +1,6 @@
+
+
+main 
+    int[] tab = [1,2,3,4];
+    tab.len(200);
+endmain

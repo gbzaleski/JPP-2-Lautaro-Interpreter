@@ -1,0 +1,14 @@
+
+
+// Default values
+function test() bool in
+    int k = 5;
+    k = 10;
+endfunction
+
+main 
+    int t;
+    print(t); // -> 0
+    print(test()); // -> false
+
+endmain

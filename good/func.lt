@@ -1,0 +1,15 @@
+
+// Simple function
+function fiver(int a) int in
+  print(a);
+  a = 10;
+  return a;
+endfunction
+
+main
+    int a = 20;
+    int b = fiver(a);
+    print(b);
+    print(a);
+endmain
+
