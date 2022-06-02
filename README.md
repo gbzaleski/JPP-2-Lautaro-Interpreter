@@ -25,7 +25,7 @@ function fiver(int a, ref int k) int in
     int w = 20 + a * k;
     k = w;
     return a + k;
-endufunction
+endfunction
 ```
 
 ### Main
@@ -159,7 +159,7 @@ tab = [[5,5], [70, 40]];
 ```
 Arrays, like the basic types, work with the `const` keyword (cannot be updated) and `ref` arguments in functions (pass by reference). <br/>
 Lautaro arrays have built-in methods `.len` and `.len(n)` which return the number of dimensions and size of n-th dimension respectively (as mentioned before, arrays are infinite therefore as `size` the range containing all non-default elements is returned). <br/>
-Arrays are indexed by natural integers (staring from 0). </br>
+Arrays are indexed by natural integers (starting from 0). </br>
 Update values at position larger than size will automatically update its size. <br/>>
 ```js
 int[][] tab = [[1,2], [3,4]];
